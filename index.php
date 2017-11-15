@@ -273,49 +273,7 @@
             </div>
     </section>
 
-<!-- 1- Nombre Solicitante
-2- Apellido Paterno Solicitante
-3- Apellido Materno Solicitante
-5- Contraseña
-5- Contraseña
-
-4- Correo electrónico
-6- Número Telefónico
-7- Id Institución
-8- Nombre Institución
-9- Periodo
-10- Listado de CURPS (hasta 5 curps & validación)
-
-
-Datos de salida
-1- Número de referencia
-2- Importe
-3- Cuenta bancaria
-Descarga del ejecutable
-Para descargar el ejecutable el
-usuario deberá ingresar a la paginá
-de la SEP(aún por definir), dónde existirá
-un módulo para la descarga.
-Activación
-El usuario ingresa el archivo .xml de activación
-en el ejecutable.
-
-
-Requiere Factura (opcional)
-12- RFC
-13- Razón Social
-14- Calle Facturación
-15- Número Exterior Facturación
-16- Número Interior Facturación
-17- Colonia Facturación
-18- C.P. Facturación
-19- Localidad Facturación
-20- Delegación/Municipio Facturación
-21- Entidad Federativa Facturación  -->
-
-    <!--◊◊◊ contacto -->
     <section id="contacto">
-
       <div class="text bgWhite row grid-x grid-padding-x align-center">
         <div class="text_container column small-12 medium-8">
         <h1 class="title colorNavy medium">Formulario de contacto</h1>
@@ -406,15 +364,27 @@ Requiere Factura (opcional)
                           <input type="text" id="vigencia" name="vigencia" placeholder="Vigencia*">
                           </div>
 
-                          <div class="floated-label-wrapper column small-12  medium-10 ">
-                             <label for="curp" class="text-left  colorNavy">CURP (INGRESE HASTA 5)</label>
-                          	 <input type="text" id="curp_1" name="curp_1" placeholder="Ingrese CURP*" class="curp">
-                          	 <input type="text" id="curp_2" name="curp_2" placeholder="Ingrese CURP*" class="curp">
-                          	 <input type="text" id="curp_3" name="curp_3" placeholder="Ingrese CURP*" class="curp">
-                          	 <input type="text" id="curp_4" name="curp_4" placeholder="Ingrese CURP*" class="curp">
-                          	 <input type="text" id="curp_5" name="curp_5" placeholder="Ingrese CURP*" class="curp">
-                          </div>
+                          <div class="floated-label-wrapper column small-10  medium-12 ">
+                               <label for="curp" class="text-left  colorNavy">CURP (INGRESE HASTA 5)</label>
+                            <div class="contentCurps">
+                            <!-- 	 <input type="text" id="curp_1" name="curp_1" placeholder="Ingrese CURP*" class="curp">
+                            	 <input type="text" id="curp_2" name="curp_2" placeholder="Ingrese CURP*" class="curp">
+                            	 <input type="text" id="curp_3" name="curp_3" placeholder="Ingrese CURP*" class="curp">
+                            	 <input type="text" id="curp_4" name="curp_4" placeholder="Ingrese CURP*" class="curp">
+                            	 <input type="text" id="curp_5" name="curp_5" placeholder="Ingrese CURP*" class="curp"> -->
+                                     <div id="inputContent"/>
+                                     </div>
+                                <div id="btnContent">
+                                       <div id="btn_curps">
+                                           <div class="text_curp">
+                                              <i class="material-icons">add_circle</i>
+                                                <span > Añade otra curp</span>
+                                              </div>
+                                          </div>
+                                </div>
+                              </div>
 
+                          </div>
 
                                   <!--subnivel-->
                                   <ul class="multilevel-accordion-menu  column small-12" data-accordion-menu>
@@ -618,15 +588,14 @@ Requiere Factura (opcional)
     </div>
 
 <!--∆∆  js   -->
-    <script src="js/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src="js/jquery.validate.js"></script>
-    <!--<script src="js/form_util.js"></script>-->    
-	<script type="text/javascript" src="js/jquery.validate.js"></script>
-	<script type="text/javascript" src="js/additional-methods.min.js"></script>
-	<script type="text/javascript">
+<script src="js/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/additional-methods.min.js"></script>
+<script type="text/javascript">
 		$(document).ready(function(){
 
 			$("#Informacion").click(function(){

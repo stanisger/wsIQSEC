@@ -619,4 +619,48 @@ ul.tabs li.is-active a{
 .sublevel-1{
   margin: 0 !important;
 }
+.contentCurps{
+  width: 100%;
+    -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#inputContent {
+  width: 80%;
+}
+#btnContent{
+  width: 20%;
+  padding: .3em 1em 1.1em !important;
+}
+#btn_curps{
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  background: #f46c4d;
+  transition: background .3s;
+}
+#btn_curps:hover{
+  background: grey;
+}
+.text_curp{
+  width: 100%;
+  position: absolute;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#btnContent i{
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+#btnContent span{
+  font-size: .8em;
+}
 /*# sourceMappingURL=style.css.map */
