@@ -17,6 +17,24 @@
 </head>
     <body>
     <main class="content">
+          <div  data-sticky data-margin-top="0" >
+            <ul class="menu menuLogin   row  align-right relative"  >
+              <div class="logo absolute">
+                  <img src="assets/img/ico_iqsec.png" alt="" >
+              </div>
+
+              <li>
+                  <a class="material-icons" href="mailto:mailto:certifielst@iqsec.com.mx">email</a>
+              </li>
+              <li>
+              <span>|</span>
+              </li>
+              <li data-toggle="offCanvasBottom1">
+             <i class="material-icons">assignment_returned</i>
+              <b href="" class="bold"> LOGIN DE DESCARGA</b>
+              </li>
+            </ul>
+          </div>
       <!--◊◊◊ HEADER -->
       <header class="row align-center">
         <img src="assets/img/logo.png" alt="IQSEC | CertiFiel Secure Transfer">
@@ -364,7 +382,7 @@
                           <input type="text" id="vigencia" name="vigencia" placeholder="Vigencia*">
                           </div>
 
-                          <div class="floated-label-wrapper column small-10  medium-12 ">
+                          <div class="floated-label-wrapper column small-12  ">
                                <label for="curp" class="text-left  colorNavy">CURP (INGRESE HASTA 5)</label>
                             <div class="contentCurps">
                             <!-- 	 <input type="text" id="curp_1" name="curp_1" placeholder="Ingrese CURP*" class="curp">
@@ -378,13 +396,14 @@
                                        <div id="btn_curps">
                                            <div class="text_curp">
                                               <i class="material-icons">add_circle</i>
-                                                <span > Añade otra curp</span>
+                                                <span  class="show-for-large">Añade otra CURP</span>
                                               </div>
                                           </div>
                                 </div>
                               </div>
-
                           </div>
+
+                          <hr class="column small-12">
 
                                   <!--subnivel-->
                                   <ul class="multilevel-accordion-menu  column small-12" data-accordion-menu>
@@ -472,7 +491,7 @@
                                           </ul>
                                   </li>
                                   </ul>
-
+                          <hr class="column small-12">
 
                           <!--submit data-open="exampleModal1"-->
                           <div class="floated-label-wrapper column small-12  ">                            
@@ -575,6 +594,47 @@
           </div>
         </footer>
     </main>
+
+    <div class="row column">
+  <div class="off-canvas-wrapper">
+
+    <div class="off-canvas position-right" id="offCanvasBottom1" data-off-canvas>
+                 
+                 <div class="contentFormActive">
+                    <h3 class="subtitle colorNavy bold">Módulo de activación</h3>
+                    <p>Ingresa tus datos y para descragar la llave de activación .xml, una vez descargada ingresala la llave .xmml en la aplicacion. </p>
+       
+            <form action="">
+                  <div class="floated-label-wrapper">
+                    <label for="emailActive" class="colorNavy "> INGRESA TU  EMAIL</label>
+                      <input type="email" id="email" name="emailActive" placeholder="Email*" required>
+                    </div>
+                   <div class="floated-label-wrapper">
+                    <label for="password" class="colorNavy "> INGRESA TU CONTRASEÑA</label>
+                      <input type="password" id="passwordActive" name="passwordActive" placeholder="Contraseña*" required>
+                    </div>
+                       <div class="floated-label-wrapper">
+                    <label for="id" class="colorNavy "> INGRESA TU NÚMERO DE RFERENCIA</label>
+                      <input type="text" id="idActive" name="idActive" placeholder="Numero de referencia*" required>
+                    </div>
+                  </form>
+                </div>    
+                    <div class="forget bgNavy">
+                         <div class="row text-center">
+                               <div class="column small-12 ">
+                                    <a href="">Ólvide mi contraseña</a>
+                               </div>
+
+                                <div class="column small-12 " data-smooth-scroll  data-animation-duration="3000" data-animation-easing="swing">
+                                    <a href="">Aún no estoy registrado</a>
+                               </div>
+                         </div>
+                    </div>
+             
+    </div>
+
+  </div>
+</div>
 
     <!--◊◊◊ Modal 1 respuesta-->
     <div class="reveal" id="exampleModal1" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
