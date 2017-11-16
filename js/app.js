@@ -1,19 +1,19 @@
 $(document).foundation()
 
 
-
+ // close canvas
     $(".closeCanvas").click(function () {
             $('#offCanvasBottom1').foundation('close');
-
     });
     
 
+// add CURPS
 var nextId = 1;
 var  inputContent = document.getElementById('inputContent');
 
 function addLabel() {
 	if(nextId<=5){
-		var input = document.createElement("input");
+	   var input = document.createElement("input");
 	    var btn = document.getElementById('btn_curps');
 	    input.setAttribute("type", "text") ;
 	    input.setAttribute("placeholder", "Ingrese su CURP*");
@@ -28,6 +28,7 @@ function addLabel() {
 addLabel();
 
 
+// HACK INPUT FILE
 ( function( $, window, document, undefined )
 {
 	$( '.inputfile' ).each( function()

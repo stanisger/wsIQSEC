@@ -716,6 +716,10 @@ color: #092F57 ;
   left: 2em;
   top: .5em;
 }
+.logo a{
+margin: 0;
+padding: 0;
+}
 .position-right{
   width: 350px;
       -ms-transform: translateX(350px);
@@ -755,11 +759,12 @@ color: #092F57 ;
    border-radius: 0 !important; 
 padding: 1.2em 0;
   background:   #0082CB;
+  color: white;
+}
+.forget-item li > a:before{
+  display: none;
 }
 
-.forget-item li > a:hover{
-      background:  #FC5511;
-}
 .accordion-title:focus, .accordion-title{
   transition: all .3s;
 }
@@ -909,3 +914,28 @@ padding: 1.2em 0;
     animation: fadeIn 1s;
     opacity: 1;
     display: block; }
+    .formForget span{
+      font-size: .8em;
+line-height: 1.3em;
+
+color: #333;
+display: block;
+    }
+    .formForget{
+      max-width: 90em;
+      margin: 0 auto;
+      height: 93vh;
+   padding-top:  6%;
+   display: block;
+      background: #ededed;}
+ 
+  .formForget ul.accordion{
+    margin: 0 auto;
+    max-width: 400px;
+
+  }
+  .mError
+{
+  font-size: 5em !important;
+    margin-bottom: .2em;
+}
