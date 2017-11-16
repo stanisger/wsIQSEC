@@ -400,7 +400,9 @@ section, footer {
     padding-top: .2em;
     padding-bottom: .2em;
     /* CHECKED */ }
-    #contacto form div input[type="text"], #contacto form div input[type="tel"], #contacto form div input[type="email"] , #contacto form div input[type="password"] {
+
+    #contacto form div input[type="text"], #contacto form div input[type="tel"], #contacto form div input[type="email"] , #contacto form div input[type="password"], 
+    #contacto form div input[type="file"] {
       background: #F0F0F0;
       border-radius: 0;
       border: 0;
@@ -716,6 +718,11 @@ color: #092F57 ;
 }
 .position-right{
   width: 350px;
+      -ms-transform: translateX(350px);
+    transform: translateX(350px);
+}
+.js-off-canvas-overlay{
+  background: rgba(254,254,254,0.7);
 }
 .contentFormActive{
   margin: 1em 1em 0; 
@@ -732,13 +739,173 @@ color: #092F57 ;
 .forget{
     margin: 0 1em 0; 
     padding: 1em;
+    background: #555;
 }
 .forget a{
   color: white;
-  text-decoration: underline;
   font-size: .8em;
+  text-decoration: underline;
   text-transform: uppercase;
   padding: .5em;
   text-align: center;
 }
-/*# sourceMappingURL=style.css.map */
+.forget-item li > a{
+   border: 0 !important;
+   text-decoration: none;
+   border-radius: 0 !important; 
+padding: 1.2em 0;
+  background:   #0082CB;
+}
+
+.forget-item li > a:hover{
+      background:  #FC5511;
+}
+.accordion-title:focus, .accordion-title{
+  transition: all .3s;
+}
+.accordion-title:focus, .accordion-title:hover{
+  background:   #0082CB;
+  color: white;
+}
+
+.inputfile {
+    width: 0.1px!important; 
+    height: 0.1px!important; 
+    opacity: 0 !important;
+    overflow: hidden !important;
+    position: absolute!important; 
+    z-index: -1 !important;
+}
+
+.inputfile + label {
+    max-width: 100%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.225rem 1.25rem;
+    /* 10px 20px */
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+
+/* style 6 */
+
+.inputfile-6 + label {
+    color: grey;
+}
+
+.inputfile-6 + label {
+    border:1px solid #cacaca;
+    background-color: transparent;
+    padding: 0;
+}
+
+.inputfile-6:focus + label,
+.inputfile-6.has-focus + label,
+.inputfile-6 + label:hover {
+    border-color: #722040;
+}
+
+.inputfile-6 + label span,
+.inputfile-6 + label strong {
+    padding: 0.25rem 1.75rem;
+    /* 10px 20px */
+}
+
+.inputfile-6 + label span {
+    width: 200px;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.inputfile-6 + label strong {
+    height: 100%;
+    color: #f1e5e6;
+    background-color: #0082CB;
+    display: inline-block;
+    transition:  all .3s ;
+}
+
+.inputfile-6:focus + label strong,
+.inputfile-6.has-focus + label strong,
+.inputfile-6 + label:hover strong {
+    background-color: #FC5511;
+}
+
+@media screen and (max-width: 50em) {
+  .inputfile-6 + label strong {
+    display: block;
+  }
+}
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.tabs-panel {
+    *zoom: 1;
+    margin-bottom: 1.5rem;
+    /* Customized */
+    display:block important!;
+    opacity: 0;
+}
+/* Customized */
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.tabs-panel:before, .tabs-panel:after {
+    content: " ";
+    display: table; }
+.tabs-panel:after {
+    clear: both; }
+.tabs-panel > .content {
+    display: none;
+    float: left;
+    padding: 0.9375rem 0; }
+.tabs-panel.is-active {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    opacity: 1;
+    display: block; }

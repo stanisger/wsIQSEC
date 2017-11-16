@@ -30,8 +30,8 @@
               <span>|</span>
               </li>
               <li data-toggle="offCanvasBottom1">
-             <i class="material-icons">assignment_returned</i>
-              <b href="" class="bold"> LOGIN DE DESCARGA</b>
+             <i class="material-icons">beenhere</i>
+              <b href="" class="bold"> ACTIVACIÓN  CERTIFIEL ST</b>
               </li>
             </ul>
           </div>
@@ -308,7 +308,7 @@
       
 
                     <!-- tabs btn -->
-                    <ul class="tabs small-12  menu align-center" data-tabs id="example-tabs" >
+                    <ul class="tabs small-12  menu align-center" data-tabs id="example-tabs"data-animate="fade-in fade-out" >
                       <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">DESEO ADQUIRIR CERTIFIEL SECURE TRANSFER </a></li>
                       <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">QUIERO MAS INFOMACIÓN  DE CERTIFIEL SECURE TRANSFER</a></li>
                     </ul>
@@ -405,92 +405,97 @@
 
                           <hr class="column small-12">
 
-                                  <!--subnivel-->
-                                  <ul class="multilevel-accordion-menu  column small-12" data-accordion-menu>
-                                  <li class="floated-label-wrapper column small-12 ">
-                                  <!--btn-->
-                                    <a href="#" class="bgNavy">   <span class="colorWhite regular">Datos de Facturación (opcional)</span> <i class="material-icons">&#xE313;</i></a>
-                                          <ul class=" menu  sublevel-1 row">
-                                          <!--CURP-->
-                                          <div class="floated-label-wrapper column  small-12  medium-6 ">
-                                              <label for="curp" class="text-left  colorNavy">RFC</label>
-                                          <input type="text" id="rfc" name="rfc" placeholder="Ingrese RFC">
-                                          </div>
+                              <!--    header collapse -->
+                                <ul class="accordion column small-12" data-accordion  data-allow-all-closed="true">
 
+                                <li class="accordion-item" data-accordion-item="">
+                                <a href="#" class="accordion-title bold colorWhite bgNavy">DATOS DE FACTURACIÓN (OPCIONAL)</a>
+
+                                  <!--    body collapse -->
+                                <div class="accordion-content" data-tab-content="" >
+
+                                <ul class=" menu  sublevel-1 row">
                                         <div class="floated-label-wrapper column  small-12  medium-6 ">
-                                              <label for="razons" class="text-left  colorNavy">RAZÓN SOCIAL</label>
-                                          <input type="text" id="razon_social" name="razon_social" placeholder="Razón Social">
-                                          </div>
+                                            <label for="curp" class="text-left  colorNavy">RFC</label>
+                                        <input type="text" id="rfc" name="rfc" placeholder="Ingrese RFC">
+                                        </div>
 
-                                      <div class="floated-label-wrapper column  small-12  medium-4 ">
-                                              <label for="nexterior" class="text-left  colorNavy">NÚMERO EXTERIOR</label>
-                                          <input type="text" id="numero_ext" name="numero_ext" placeholder="Número Exterior">
-                                          </div>
+                                      <div class="floated-label-wrapper column  small-12  medium-6 ">
+                                            <label for="razons" class="text-left  colorNavy">RAZÓN SOCIAL</label>
+                                        <input type="text" id="razon_social" name="razon_social" placeholder="Razón Social">
+                                        </div>
 
-                                          <div class="floated-label-wrapper column  small-12  medium-4 ">
-                                              <label for="ninterior" class="text-left  colorNavy">NÚMERO INTERIOR</label>
-                                          <input type="text" id="numero_int" name="numero_int" placeholder="Número Interior">
-                                          </div>
+                                    <div class="floated-label-wrapper column  small-12  medium-4 ">
+                                            <label for="nexterior" class="text-left  colorNavy">NÚMERO EXTERIOR</label>
+                                        <input type="text" id="numero_ext" name="numero_ext" placeholder="Número Exterior">
+                                        </div>
 
-                                          <div class="floated-label-wrapper column  small-12  medium-4 ">
-                                              <label for="colonia" class="text-left  colorNavy">COLONIA</label>
-                                          <input type="text" id="colonia" name="colonia" placeholder="Colonia facturación">
-                                          </div>
+                                        <div class="floated-label-wrapper column  small-12  medium-4 ">
+                                            <label for="ninterior" class="text-left  colorNavy">NÚMERO INTERIOR</label>
+                                        <input type="text" id="numero_int" name="numero_int" placeholder="Número Interior">
+                                        </div>
 
-                                          <div class="floated-label-wrapper column  small-12  medium-2 ">
-                                              <label for="CP" class="text-left  colorNavy">C.P</label>
-                                          <input type="text" id="cp" name="cp" placeholder="C.P facturación">
-                                          </div>
-                                           <div class="floated-label-wrapper column  small-12  medium-5 ">
-                                              <label for="localidad" class="text-left  colorNavy">LOCALIDAD </label>
-                                          <input type="text" id="localidad" name="localidad" placeholder="Localidad facturación">
-                                          </div>
+                                        <div class="floated-label-wrapper column  small-12  medium-4 ">
+                                            <label for="colonia" class="text-left  colorNavy">COLONIA</label>
+                                        <input type="text" id="colonia" name="colonia" placeholder="Colonia facturación">
+                                        </div>
 
-                                           <div class="floated-label-wrapper column  small-12  medium-5">
-                                              <label for="CP" class="text-left  colorNavy">DELEGACIÓN / MUNICIPIO</label>
-                                          <input type="text" id="del_mun" name="del_mun" placeholder=" Delegación/Municipio Facturación">
-                                          </div>
-	                                           <div class="floated-label-wrapper column  small-12  medium-12 ">
-	                                              <label for="entidad" class="text-left  colorNavy">ENTIDAD FEDERATIVA </label>
-	                                              <select name="entidad" id="entidad" placeholder="Entidad Federativa Facturación">
-	                                              		<option value="">Seleccione una opción</option>
-		                                              	<option value="Aguascalientes">Aguascalientes</option>
-														<option value="Baja California">Baja California </option>
-														<option value="Baja California Sur">Baja California Sur </option>
-														<option value="Campeche">Campeche </option>
-														<option value="Chiapas">Chiapas </option>
-														<option value="Chihuahua">Chihuahua </option>
-														<option value="Coahuila">Coahuila </option>
-														<option value="Colima">Colima </option>
-														<option value="Distrito Federal">Distrito Federal</option>
-														<option value="Durango">Durango </option>
-														<option value="Estado de México">Estado de México </option>
-														<option value="Guanajuato">Guanajuato </option>
-														<option value="Guerrero">Guerrero </option>
-														<option value="Hidalgo">Hidalgo </option>
-														<option value="Jalisco">Jalisco </option>
-														<option value="Michoacán">Michoacán </option>
-														<option value="Morelos">Morelos </option>
-														<option value="Nayarit">Nayarit </option>
-														<option value="Nuevo León">Nuevo León </option>
-														<option value="Oaxaca">Oaxaca </option>
-														<option value="Puebla">Puebla </option>
-														<option value="Querétaro">Querétaro </option>
-														<option value="Quintana Roo">Quintana Roo </option>
-														<option value="San Luis Potosí">San Luis Potosí </option>
-														<option value="Sinaloa">Sinaloa </option>
-														<option value="Sonora">Sonora </option>
-														<option value="Tabasco">Tabasco </option>
-														<option value="Tamaulipas">Tamaulipas </option>
-														<option value="Tlaxcala">Tlaxcala </option>
-														<option value="Veracruz">Veracruz </option>
-														<option value="Yucatán">Yucatán </option>
-														<option value="Zacatecas">Zacatecas</option>
-	                                              </select>
-	                                          </div>                                          
-                                          </ul>
-                                  </li>
-                                  </ul>
+                                        <div class="floated-label-wrapper column  small-12  medium-2 ">
+                                            <label for="CP" class="text-left  colorNavy">C.P</label>
+                                        <input type="text" id="cp" name="cp" placeholder="C.P facturación">
+                                        </div>
+                                         <div class="floated-label-wrapper column  small-12  medium-5 ">
+                                            <label for="localidad" class="text-left  colorNavy">LOCALIDAD </label>
+                                        <input type="text" id="localidad" name="localidad" placeholder="Localidad facturación">
+                                        </div>
+
+                                         <div class="floated-label-wrapper column  small-12  medium-5">
+                                            <label for="CP" class="text-left  colorNavy">DELEGACIÓN / MUNICIPIO</label>
+                                        <input type="text" id="del_mun" name="del_mun" placeholder=" Delegación/Municipio Facturación">
+                                        </div>
+                                           <div class="floated-label-wrapper column  small-12  medium-12 ">
+                                              <label for="entidad" class="text-left  colorNavy">ENTIDAD FEDERATIVA </label>
+                                              <select name="entidad" id="entidad" placeholder="Entidad Federativa Facturación">
+                                                  <option value="">Seleccione una opción</option>
+                                                  <option value="Aguascalientes">Aguascalientes</option>
+                                                  <option value="Baja California">Baja California </option>
+                                                  <option value="Baja California Sur">Baja California Sur </option>
+                                                  <option value="Campeche">Campeche </option>
+                                                  <option value="Chiapas">Chiapas </option>
+                                                  <option value="Chihuahua">Chihuahua </option>
+                                                  <option value="Coahuila">Coahuila </option>
+                                                  <option value="Colima">Colima </option>
+                                                  <option value="Distrito Federal">Distrito Federal</option>
+                                                  <option value="Durango">Durango </option>
+                                                  <option value="Estado de México">Estado de México </option>
+                                                  <option value="Guanajuato">Guanajuato </option>
+                                                  <option value="Guerrero">Guerrero </option>
+                                                  <option value="Hidalgo">Hidalgo </option>
+                                                  <option value="Jalisco">Jalisco </option>
+                                                  <option value="Michoacán">Michoacán </option>
+                                                  <option value="Morelos">Morelos </option>
+                                                  <option value="Nayarit">Nayarit </option>
+                                                  <option value="Nuevo León">Nuevo León </option>
+                                                  <option value="Oaxaca">Oaxaca </option>
+                                                  <option value="Puebla">Puebla </option>
+                                                  <option value="Querétaro">Querétaro </option>
+                                                  <option value="Quintana Roo">Quintana Roo </option>
+                                                  <option value="San Luis Potosí">San Luis Potosí </option>
+                                                  <option value="Sinaloa">Sinaloa </option>
+                                                  <option value="Sonora">Sonora </option>
+                                                  <option value="Tabasco">Tabasco </option>
+                                                  <option value="Tamaulipas">Tamaulipas </option>
+                                                  <option value="Tlaxcala">Tlaxcala </option>
+                                                  <option value="Veracruz">Veracruz </option>
+                                                  <option value="Yucatán">Yucatán </option>
+                                                  <option value="Zacatecas">Zacatecas</option>
+                                              </select>
+                                          </div>                                          
+                                        </ul>
+                                </div>
+                                </li>
+                                </ul>
+
                           <hr class="column small-12">
 
                           <!--submit data-open="exampleModal1"-->
@@ -507,28 +512,39 @@
                     <div class="tabs-panel" id="panel2">
 
                       <form class="callout text-center row" id='frm-contacto' name="frm-contacto">
+                          <div class="floated-label-wrapper column small-12 text-left ">
+                                  <h4 class="suvtitle colorNavy medium">Contacto</h4>
+                                  <span>Ingresa tus datos para más información de Certfiel ST</span>
+                                  <br><br>
+                                </div>
 
                     <div class="floated-label-wrapper column small-12 medium-6">
+                         <label for="name" class="text-left  colorNavy">NOMBRE(S)</label>
                       <input type="text" id="name" name="name" placeholder="Nombre*" required>
                     </div>
 
                     <div class="floated-label-wrapper column small-12 medium-6">
+                         <label for="lastname" class="text-left  colorNavy">APELLIDO</label>
                       <input type="text" id="lastname" name="lastname" placeholder="Apellidos*" required>
                     </div>
 
                     <div class="floated-label-wrapper column small-12 ">
+                         <label for="empresa" class="text-left  colorNavy">UNIVERSIDAD</label>
                       <input type="text" id="empresa" name="empresa" placeholder="Institución / Universidad *" required>
                     </div>
 
                     <div class="floated-label-wrapper column small-12 medium-4">
+                         <label for="email" class="text-left  colorNavy">EMAIL</label>
                      <input type="email" id="mail" name="mail" placeholder="Correo electrónico*" required>
                     </div>
 
                     <div class="floated-label-wrapper column small-12 medium-4">
+                         <label for="tel" class="text-left  colorNavy">TÉLEFONO</label>
                       <input type="tel" id="tel" name="tel" placeholder="Teléfono fijo (55)*" required>
                     </div>
 
                     <div class="floated-label-wrapper column small-12 medium-4">
+                         <label for="cel" class="text-left  colorNavy">CELULAR</label>
                       <input type="tel" id="cel" name="cel" placeholder="Teléfono móvil" >
                     </div>
 
@@ -560,6 +576,7 @@
           </div>
       </div>
     </section>
+
 
         <!--◊◊◊ footer -->
         <footer>
@@ -601,8 +618,9 @@
     <div class="off-canvas position-right" id="offCanvasBottom1" data-off-canvas>
                  
                  <div class="contentFormActive">
+                  <a class="material-icons closeCanvas colorOrange" >cancel</a>
                     <h3 class="subtitle colorNavy bold">Módulo de activación</h3>
-                    <p>Ingresa tus datos y para descragar la llave de activación .xml, una vez descargada ingresala la llave .xmml en la aplicacion. </p>
+                    <p>Ingresa tus datos y carga es archivo .xml que genero  <strong>Certifiel ST</strong> en tu ordenador, </p>
        
             <form action="">
                   <div class="floated-label-wrapper">
@@ -617,16 +635,65 @@
                     <label for="id" class="colorNavy "> INGRESA TU NÚMERO DE RFERENCIA</label>
                       <input type="text" id="idActive" name="idActive" placeholder="Numero de referencia*" required>
                     </div>
+                         <div class="floated-label-wrapper">
+                          <label for="id" class="colorNavy "> INGRESA .xml</label>
+               
+                            <div class="box">
+                              <input type="file" name="file-7[]" id="file-7" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
+                              <label for="file-7"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></strong></label>
+                            </div>
+                          </div>
                   </form>
+
                 </div>    
-                    <div class="forget bgNavy">
+                    <div class="forget ">
                          <div class="row text-center">
                                <div class="column small-12 ">
-                                    <a href="">Ólvide mi contraseña</a>
+                                   <ul class="accordion forget-item " data-accordion  data-allow-all-closed="true">
+                                        <li class="accordion-item " data-accordion-item  >
+                                          <!-- Accordion tab title -->
+                                          <a href="#" class="accordion-title ">Olvide mi contraseña</a>
+
+                                          <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                          <div class="accordion-content" data-tab-content>
+                                            <form  id="frm-reactivar-pass" name="frm-reactivar-pass" novalidate="novalidate">
+         
+                                            <div class="floated-label-wrapper ">
+                                            <label for="name" class="text-left  colorNavy">ID INSTITUCIÓN</label>
+                                            <input type="text" id="id_institucion" name="id_institucion" placeholder="ID Institucional*">
+                                            </div>
+
+                                            <div class="floated-label-wrapper ">
+                                            <label for="lastname" class="text-left  colorNavy">EMAIL</label>
+                                            <input type="email" id="email" name="email" placeholder="Email*">
+                                            </div>
+
+                                            <div class="floated-label-wrapper ">
+                                            <label for="lastname" class="text-left  colorNavy">CONTRASEÑA ANTERIOR</label>
+                                            <input type="password" id="pass_tmp" name="pass_tmp" placeholder="Contraseña anterior*">
+                                            </div>
+
+                                            <div class="floated-label-wrapper ">
+                                            <label for="lastname" class="text-left  colorNavy">NUEVA CONTRASEÑA</label>
+                                            <input type="password" id="pass_new" name="pass_new" placeholder="Nueva contraseña*">
+                                            </div>                        
+
+                                            <!--submit data-open="exampleModal1"-->
+                                            <div class="floated-label-wrapper column small-12  ">                            
+                                              <button class="button expanded bgOrange" id="btn_reactivar_pwd" type="submit">Enviar</button>
+<!--                                               <div class="twelve columns text-center"><br>
+                                                    <img src="assets/img/loading.gif" alt="Cargando" id="loading" style="display: none;">
+                                                </div> -->
+                                            </div>                                  
+                          </form>
+                                          </div>
+                                        </li>
+                                        <!-- ... -->
+                                      </ul>
                                </div>
 
                                 <div class="column small-12 " data-smooth-scroll  data-animation-duration="3000" data-animation-easing="swing">
-                                    <a href="">Aún no estoy registrado</a>
+                                    <a href="#contacto" class="closeCanvas">Aún no estoy registrado</a>
                                </div>
                          </div>
                     </div>
