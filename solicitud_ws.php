@@ -16,7 +16,20 @@ if(isset($_POST) && count($_POST)>0){
 	$numeroTelefonico 		= strip_tags(trim($_POST['tel']));
 	$idInstitucion 			= strip_tags(trim($_POST['id_institucion']));
 	$nombreInstitucion 		= strip_tags(trim($_POST['institucion']));
-	$vigencia 				= strip_tags(trim($_POST['vigencia']));
+	$vigencia 				= intval(strip_tags(trim($_POST['vigencia'])));
+
+	/// campos opcionales facturacion
+	$rfc 			 		= 'NA';
+	$razonSocial 	 		= 'NA';			
+	$calle 			 		= 'NA';
+	$numeroExterior  		= 'NA';
+	$numeroInterior  		= 'NA';
+	$colonia 		 		= 'NA';
+	$codigoPostal			= 'NA';
+	$localidad 		 		= 'NA';
+	$delegacionMunicipio 	= 'NA';
+	$entidadFederativa 		= 'NA';
+
 	$curps 					= array();
 	$paramatetrosFactura 	= array();
 
@@ -45,13 +58,13 @@ if(isset($_POST) && count($_POST)>0){
 			$requiereFactura 			 = intval(strip_tags($_POST['factura']));
 			$rfc 			 			 = strip_tags(trim($_POST['rfc']));
 			$razonSocial 	 			 = strip_tags(trim($_POST['razon_social']));
-			//$calle 			 			 = strip_tags(strip_tags($_POST['calle']));
+			//$calle		 	 			 = strip_tags(trim($_POST['calle']));			
 			$calle 			 			 = 'cove';
-			$numeroExterior  			 = intval(strip_tags(trim($_POST['numero_ext'])));
-			$numeroInterior  			 = strip_tags(trim($_POST['numero_int']));
+			$numeroExterior  			 = strip_tags(trim($_POST['numero_ext']));
+			$numeroInterior  			 = (strip_tags(trim($_POST['numero_int'])) == '') ? 'NA':strip_tags(trim($_POST['numero_int']));
 			$colonia 		 			 = strip_tags(trim($_POST['colonia']));
-			$codigoPostal				 = intval(strip_tags(trim($_POST['cp'])));
-			$localidad 		 			 = strip_tags(trim($_POST['localidad']));	
+			$codigoPostal				 = strip_tags(trim($_POST['cp']));
+			$localidad 		 			 = (strip_tags(trim($_POST['localidad'])) == '') ? 'NA':strip_tags(trim($_POST['localidad']));	
 			$delegacionMunicipio 		 = strip_tags(trim($_POST['del_mun']));
 			$entidadFederativa 		 	 = strip_tags(trim($_POST['entidad']));
 
@@ -66,10 +79,34 @@ if(isset($_POST) && count($_POST)>0){
 		}
 
 		if($error==0){
+			
+			/*
+			$params = array(
+			'nombreSolicitante' 	=> 'Berenice',
+			'apellidoPaterno' 		=> 'Lopez',
+			'apellidoMaterno' 		=> 'Mejia',
+			'correoElectronico' 	=> 'ber_ale00@hotmail.com',
+			'contrasenaCorreo' 		=> '12121212',
+			'numeroTelefonico' 		=> '5554161644',
+			'idInstitucion' 		=> '000000',
+			'nombreInstitucion' 	=> 'UNAM',
+			'vigencia' 				=> 2,
+			'curps'					=> array('LOMB841017MDFPJR04','MEME580801MGTJRS01'),
+			'requiereFactura' 		=> 1,
+			'rfc' 					=> 'LOM8410179G5',
+			'razonSocial' 			=> 'Empresa 1',
+			'calle' 				=> 'Cove',
+			'numeroExterior'		=> '7',
+			'numeroInterior'		=> '',
+			'colonia'				=> 'San Fernando',
+			'codigoPostal'			=> '52765',
+			'localidad'				=> '',
+			'delegacionMunicipio'	=> 'Huixquilucan',
+			'entidadFederativa'		=> 'Estado de México'					
+		 	);
+		 	*/
 
-			if($requiereFactura ==1){
-
-				$params = array(
+		 	$params = array(
 						'nombreSolicitante' 	=> $nombreSolicitante,
 						'apellidoPaterno' 		=> $apellidoPaterno,
 						'apellidoMaterno' 		=> $apellidoMaterno,
@@ -91,28 +128,11 @@ if(isset($_POST) && count($_POST)>0){
 						'localidad'				=> $localidad,
 						'delegacionMunicipio'	=> $delegacionMunicipio,
 						'entidadFederativa'		=> $entidadFederativa
-					);
-			}else{
-
-				$params = array(
-					'nombreSolicitante' 	=> $nombreSolicitante,
-					'apellidoPaterno' 		=> $apellidoPaterno,
-					'apellidoMaterno' 		=> $apellidoMaterno,
-					'correoElectronico' 	=> $correoElectronico,
-					'contrasenaCorreo' 		=> $contrasenaCorreo,
-					'numeroTelefonico' 		=> $numeroTelefonico,
-					'idInstitucion' 		=> $idInstitucion,
-					'nombreInstitucion' 	=> $nombreInstitucion,
-					'vigencia' 				=> $vigencia,
-					'curps'					=> $curps,
-					'requiereFactura' 		=> $requiereFactura					
-				 );	
-			}
+					);			
 			
-			
-			var_dump($params);die;
-			$result_solicitud = $iq_ws->Metodo('SolicitudLicencia',$params); 
-			var_dump($result_solicitud);die;
+			//var_dump($params);die;
+			$result_solicitud = $iq_ws->Metodo('SolicitudLicencia',$params); 			
+			//var_dump($result_solicitud);die;
 			if($result_solicitud->SolicitudLicenciaResult->estado==0){
 				$estado = 1;
 				$msg 	= 'Su solicitud ha sido procesada correctamente, en breve recibirá un email con la información correspondiente';
@@ -133,55 +153,3 @@ if(isset($_POST) && count($_POST)>0){
 }
 
 echo json_encode(array('estado'=>$estado, 'msg'=>$msg));
-
-      
-/*
-$params = array(
-			'nombreSolicitante' 	=> 'Pablo Jahir',
-			'apellidoPaterno' 		=> 'Maya',
-			'apellidoMaterno' 		=> 'Jimenez',
-			'correoElectronico' 	=> 'themstudio@hotmail.com',
-			'contrasenaCorreo' 		=> '123456789',
-			'numeroTelefonico' 		=> '5570739347',
-			'idInstitucion' 		=> '1',
-			'nombreInstitucion' 	=> 'UVM',
-			'vigencia' 				=> 2020,
-			'curps'					=> array('MAJP900906HMNYMB07'),
-			'requiereFactura' 		=> true,
-			'rfc' 					=> 'MAJP900906IK5',
-			'razonSocial' 			=> '',
-			'calle' 				=> '',
-			'numeroExterior'		=> '',
-			'numeroInterior'		=> '',
-			'colonia'				=> '',
-			'codigoPostal'			=> '',
-			'localidad'				=> '',
-			'delegacionMunicipio'	=> '',
-			'entidadFederativa'		=> ''					
-		 );
-
-try{
-  $result = $soap->__soapCall('SolicitudLicencia',array($params));
-
-  echo $result->SolicitudLicenciaResult->estado;
-}
-catch (SoapFault  $exception)
-{
-echo $exception->faultstring;
-}
-
-
-*/
-/*
-  $client = new SoapClient("http://validmobile.iqsec.mx/WSLicencias/WSLicencia.asmx?WSDL",);
-  $result = $client->SolicitudLicencia();
-  $xml = $result->SolicitudLicenciaRespuesta;
-var_dump($xml);die;
-  // procesar xml
-  $xml = simplexml_load_string($xml);
-  foreach($xml->Table as $table) 
-  {
-    $output .= "<p>$table->Name</p>";
-  }
-  print_r($output);
-*/
