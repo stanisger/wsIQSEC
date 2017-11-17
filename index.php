@@ -411,17 +411,20 @@
                                         <input type="text" id="razon_social" name="razon_social" placeholder="Razón Social">
                                         </div>
 
-                                    <div class="floated-label-wrapper column  small-12  medium-4 ">
+                                    <div class="floated-label-wrapper column  small-12  medium-3 ">
                                             <label for="nexterior" class="text-left  colorNavy">NÚMERO EXTERIOR</label>
                                         <input type="text" id="numero_ext" name="numero_ext" placeholder="Número Exterior">
                                         </div>
 
-                                        <div class="floated-label-wrapper column  small-12  medium-4 ">
+                                        <div class="floated-label-wrapper column  small-12  medium-3 ">
                                             <label for="ninterior" class="text-left  colorNavy">NÚMERO INTERIOR</label>
                                         <input type="text" id="numero_int" name="numero_int" placeholder="Número Interior">
                                         </div>
-
-                                        <div class="floated-label-wrapper column  small-12  medium-4 ">
+                                        <div class="floated-label-wrapper column  small-12  medium-3 ">
+                                            <label for="colonia" class="text-left  colorNavy">CALLE</label>
+                                        <input type="text" id="calle" name="calle" placeholder="Calle facturación">
+                                        </div>
+                                        <div class="floated-label-wrapper column  small-12  medium-3 ">
                                             <label for="colonia" class="text-left  colorNavy">COLONIA</label>
                                         <input type="text" id="colonia" name="colonia" placeholder="Colonia facturación">
                                         </div>
@@ -488,7 +491,7 @@
                           <div class="floated-label-wrapper column small-12  ">                            
                             <button class="button expanded bgOrange" id="Informacion">Enviar</button>
                             <div class="twelve columns text-center"><br />
-                                  <img src="assets/img/loading.gif" alt="Cargando" id='loading' style="display: none;">
+                                  <img src="assets/img/loading.gif" alt="Cargando" id='loading2' style="display: none;">
                               </div>
                           </div>                                  
                           </form>
@@ -608,27 +611,28 @@
                     <h3 class="subtitle colorNavy bold">Módulo de activación</h3>
                     <p>Ingresa tus datos y carga es archivo .xml que genero  <strong>Certifiel ST</strong> en tu ordenador, </p>
        
-            <form action="">
+            	<form action='upload_xml_ws.php' id='frm-activacion' name="frm-activacion" enctype="multipart/form-data" method="POST">
                   <div class="floated-label-wrapper">
                     <label for="emailActive" class="colorNavy "> INGRESA TU  EMAIL</label>
-                      <input type="email" id="email" name="emailActive" placeholder="Email*" required>
+                      <input type="email" id="email" name="email" placeholder="Email*" required>
                     </div>
                    <div class="floated-label-wrapper">
                     <label for="password" class="colorNavy "> INGRESA TU CONTRASEÑA</label>
-                      <input type="password" id="passwordActive" name="passwordActive" placeholder="Contraseña*" required>
+                      <input type="password" id="pass" name="pass" placeholder="Contraseña*" required>
                     </div>
                        <div class="floated-label-wrapper">
                     <label for="id" class="colorNavy "> INGRESA TU NÚMERO DE RFERENCIA</label>
-                      <input type="text" id="idActive" name="idActive" placeholder="Numero de referencia*" required>
+                      <input type="text" id="id_institucion" name="id_institucion" placeholder="Numero de referencia*" required>
                     </div>
                          <div class="floated-label-wrapper">
                           <label for="id" class="colorNavy "> INGRESA .xml</label>
                
                             <div class="box">
-                              <input type="file" name="file-7[]" id="file-7" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
-                              <label for="file-7"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></strong></label>
+                              <input type="file" name="file" id="file" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
+                              <label for="file"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></strong></label>
                             </div>
                           </div>
+                          <button class="button expanded bgOrange" type="submit">Enviar</button>
                   </form>
 
                 </div>    
