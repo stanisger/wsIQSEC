@@ -96,8 +96,13 @@ $(document).ready(function() {
                       maxlength:5,
                       digits:true
                     },
-                    numero_ext:{                                            
+                    numero_int:{                                            
                       maxlength:6                     
+                    },
+                    calle:{
+                      required:true,
+                      minlength:3,
+                      maxlength:80
                     },
                     colonia:{
                       required:true,
@@ -184,6 +189,11 @@ $(document).ready(function() {
                     numero_int:{                                            
                       maxlength: 'Máximo 6 caracteres'                      
                     },
+                    calle:{
+                      required: 'Campo requerido',
+                      minlength: 'Mínimo 3 caracteres',
+                      maxlength: 'Máximo 80 caracteres'
+                    },
                     colonia:{
                       required: 'Campo requerido',
                       minlength: 'Mínimo 3 caracteres',
@@ -209,7 +219,7 @@ $(document).ready(function() {
               },
                   submitHandler: function (form) {
                       $("#Informacion").hide();
-                      $("#loading").show();                       
+                      $("#loading2").show();                       
                     $.ajax({
                          type: "POST",
                          url: "solicitud_ws.php",
@@ -217,7 +227,7 @@ $(document).ready(function() {
                          data: $("#frm-solicitud").serialize(),
                          success: function(data){
                           $("#Informacion").show();
-                              $("#loading").hide();
+                              $("#loading2").hide();
                             if(data.estado ==1){
                               $('#exampleModal1').foundation('open');
                               $('#frm-solicitud')[0].reset();
@@ -356,10 +366,10 @@ $(document).ready(function() {
                        data: $("#frm-solicitud").serialize(),
                        success: function(data){
                         $("#Informacion").show();
-                          $("#loading").hide();
+                          $("#loading2").hide();
                           if(data.estado ==1){
                             $('#exampleModal1').foundation('open');
-                            $('#frm-solicitud')[0].reset();
+                            $('#frm-solicitud2')[0].reset();
                           }else{
                             alert(data.msg);
                           }
@@ -402,8 +412,7 @@ $(document).ready(function() {
                        success: function(data){
                           $("#btn_password").show();
                           $("#loading").hide();
-                          if(data.estado ==1){
-                            alert(data.msg);
+                          if(data.estado ==1){                            
                             $('#exampleModal1').foundation('open');
                             $("#frm-pass")[0].reset();
                           }else{
@@ -467,8 +476,7 @@ $(document).ready(function() {
                        success: function(data){
                           $("#btn_reactivar_pwd").show();
                           $("#loading").hide();
-                          if(data.estado ==1){
-                            alert(data.msg);
+                          if(data.estado ==1){                            
                             $('#exampleModal1').foundation('open');
                             $("#frm-reactivar-pass")[0].reset();
                           }else{
