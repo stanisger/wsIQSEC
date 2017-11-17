@@ -20,7 +20,7 @@
 
                           <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                           <div class="accordion-content" data-tab-content>
-                          <form  id="frm-reactivar-pass" name="frm-reactivar-pass" novalidate="novalidate">
+                          <form  id="frm-pass" name="frm-pass" novalidate="novalidate">
 
 
                           <div class="floated-label-wrapper ">
@@ -29,13 +29,13 @@
                           </div>
 
                           <div class="floated-label-wrapper ">
-                          <label for="idReferencia" class="text-left  colorNavy">ID REFERNCIA</label>
-                          <input type="text" id="id_institucion" name="id_institucion" placeholder="ID Referencia*" required>
+                          <label for="idReferencia" class="text-left  colorNavy">ID INSTITUCIÓN</label>
+                          <input type="text" id="id_institucion" name="id_institucion" placeholder="ID Institución*" required>
                           </div>
              
   
                           <div class="floated-label-wrapper column small-12  ">                            
-                          <button class="button expanded bgOrange" id="#" type="submit">Enviar</button>
+                          <button class="button expanded bgOrange" id="btn_password" type="submit">Enviar</button>
                           </div>        
 
                            <div class="floated-label-wrapper text-center">
@@ -46,6 +46,19 @@
                           </li>
                   <!-- ... -->
                   </ul>
+                  <!--◊◊◊ Modal 1 respuesta-->
+                  <div class="reveal" id="exampleModal1" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+                      <div class="content_reveal">
+                      <h1>Solicitud procesada correctamente</h1>
+                      <p class="lead">Se ha enviado un email a tu cuenta de correo electrónico</p>
+                      <button class="close-button" data-close aria-label="Close modal" type="button">
+                      <i class="material-icons">&#xE5CD;</i>
+                      </button>
+                      </div>
+                  </div>
+                  <div class="twelve columns text-center"><br />
+                                  <img src="assets/img/loading.gif" alt="Cargando" id='loading' style="display: none;">
+                              </div>
               </section>
 <?php include 'footer.php'; ?>
 

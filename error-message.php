@@ -29,6 +29,7 @@
                           
                            <div class="floated-label-wrapper text-center">
                             <span class="light ">Los datos Ingresados no son validos</span>
+                            <span class="light "><?php echo $_GET['e']; ?></span>
                           </div>
                               <div class="floated-label-wrapper text-center">
                                 <a href="index.php"><span class="bold ">Por favor vuelve a intentarlo.</span>

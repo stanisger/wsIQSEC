@@ -29,7 +29,7 @@
                           </div>
        
                               <div class="floated-label-wrapper text-center">
-                                <a href="index.php"><span>Recibimos con exito tus datos, descarga este .xml e ingresalo en la  aplicación de Cerifiel ST para activarla.</span>
+                                <a href="#"><span><?php echo $_GET['e']; ?></span>
                                 <i class="material-icons colorOrange">file_download</i></a>
                             
                           </div>

@@ -58,8 +58,7 @@ if(isset($_POST) && count($_POST)>0){
 			$requiereFactura 			 = intval(strip_tags($_POST['factura']));
 			$rfc 			 			 = strip_tags(trim($_POST['rfc']));
 			$razonSocial 	 			 = strip_tags(trim($_POST['razon_social']));
-			//$calle		 	 			 = strip_tags(trim($_POST['calle']));			
-			$calle 			 			 = 'cove';
+			$calle		 	 			 = strip_tags(trim($_POST['calle']));						
 			$numeroExterior  			 = strip_tags(trim($_POST['numero_ext']));
 			$numeroInterior  			 = (strip_tags(trim($_POST['numero_int'])) == '') ? 'NA':strip_tags(trim($_POST['numero_int']));
 			$colonia 		 			 = strip_tags(trim($_POST['colonia']));
@@ -79,32 +78,6 @@ if(isset($_POST) && count($_POST)>0){
 		}
 
 		if($error==0){
-			
-			/*
-			$params = array(
-			'nombreSolicitante' 	=> 'Berenice',
-			'apellidoPaterno' 		=> 'Lopez',
-			'apellidoMaterno' 		=> 'Mejia',
-			'correoElectronico' 	=> 'ber_ale00@hotmail.com',
-			'contrasenaCorreo' 		=> '12121212',
-			'numeroTelefonico' 		=> '5554161644',
-			'idInstitucion' 		=> '000000',
-			'nombreInstitucion' 	=> 'UNAM',
-			'vigencia' 				=> 2,
-			'curps'					=> array('LOMB841017MDFPJR04','MEME580801MGTJRS01'),
-			'requiereFactura' 		=> 1,
-			'rfc' 					=> 'LOM8410179G5',
-			'razonSocial' 			=> 'Empresa 1',
-			'calle' 				=> 'Cove',
-			'numeroExterior'		=> '7',
-			'numeroInterior'		=> '',
-			'colonia'				=> 'San Fernando',
-			'codigoPostal'			=> '52765',
-			'localidad'				=> '',
-			'delegacionMunicipio'	=> 'Huixquilucan',
-			'entidadFederativa'		=> 'Estado de México'					
-		 	);
-		 	*/
 
 		 	$params = array(
 						'nombreSolicitante' 	=> $nombreSolicitante,
@@ -130,9 +103,9 @@ if(isset($_POST) && count($_POST)>0){
 						'entidadFederativa'		=> $entidadFederativa
 					);			
 			
-			//var_dump($params);die;
+			
 			$result_solicitud = $iq_ws->Metodo('SolicitudLicencia',$params); 			
-			//var_dump($result_solicitud);die;
+			
 			if($result_solicitud->SolicitudLicenciaResult->estado==0){
 				$estado = 1;
 				$msg 	= 'Su solicitud ha sido procesada correctamente, en breve recibirá un email con la información correspondiente';
